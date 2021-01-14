@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClubinhoDoBebe.Domain", "Cl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClubinhoDoBebe.Domain.Models", "ClubinhoDoBebe.Domain.Models\ClubinhoDoBebe.Domain.Models.csproj", "{14CB94E6-4117-4FE4-824A-1B1CDFDE54B1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - API", "1 - API", "{A7AC929D-E8F1-434E-ABE0-1E18F36B97C3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
