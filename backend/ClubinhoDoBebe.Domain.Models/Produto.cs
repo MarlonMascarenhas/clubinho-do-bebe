@@ -1,10 +1,7 @@
 ﻿using System;
 
 namespace ClubinhoDoBebe.Domain.Models {
-    public class Produto {
-
-        public Guid Id { set; get; }
-        
+    public class Produto:EntidadeBase {
         public string Name { set; get; }
 
         public string Descricao { set; get; }
