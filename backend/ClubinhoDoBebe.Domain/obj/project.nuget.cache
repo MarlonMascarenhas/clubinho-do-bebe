@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MMvbCm8VQZ4xpnw9mpwlRtcN170ohnr+P2qy9iTcxrKZ/2lzHqztHySjvgCfoo7b6woyzYsDYlzEokLt+YOjeA==",
+  "dgSpecHash": "P5ZuAaxuT8GtzTZt/UHbOPpnVDdP7cY/rs285n49GgwkH7GrmInOWOcVS58V5rsDvCobBuS1EhMD+RdtZYDqkQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Marlon\\Source\\Repos\\MarlonMascarenhas\\clubinho-do-bebe\\backend\\ClubinhoDoBebe.Domain\\ClubinhoDoBebe.Domain.csproj",
+  "projectFilePath": "C:\\Users\\Marlon\\source\\repos\\MarlonMascarenhas\\clubinho-do-bebe\\backend\\ClubinhoDoBebe.Domain\\ClubinhoDoBebe.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
