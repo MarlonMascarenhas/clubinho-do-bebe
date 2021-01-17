@@ -11,11 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClubinhoDoBebe.Domain.Model
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - API", "1 - API", "{A7AC929D-E8F1-434E-ABE0-1E18F36B97C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClubinhoDoBebe.API", "ClubinhoDoBebe.API\ClubinhoDoBebe.API.csproj", "{052CCB44-D4AD-4BF1-A8F3-4E2F511666D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClubinhoDoBebe.API", "ClubinhoDoBebe.API\ClubinhoDoBebe.API.csproj", "{052CCB44-D4AD-4BF1-A8F3-4E2F511666D3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Infra", "3 - Infra", "{BC09EAA9-8980-48E2-8FEE-CE36D022B3C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClubinhoDoBebe.Infra", "ClubinhoDoBebe.Infra2\ClubinhoDoBebe.Infra.csproj", "{A33866A4-9B92-4478-A3D9-CB3057619DB3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClubinhoDoBebe.Infra", "ClubinhoDoBebe.Infra2\ClubinhoDoBebe.Infra.csproj", "{A33866A4-9B92-4478-A3D9-CB3057619DB3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
