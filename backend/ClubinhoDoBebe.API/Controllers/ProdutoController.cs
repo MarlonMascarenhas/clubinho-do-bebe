@@ -2,6 +2,7 @@
 using ClubinhoDoBebe.Infra;
 using ClubinhoDoBebe.Infra.FirebaseConnection;
 using static System.Console;
+using System;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -35,9 +36,9 @@ namespace ClubinhoDoBebe.API.Controllers
         [HttpGet("{id}")]
         public string Get(string id)
         {
-            FirebaseDB firebaseDBTeams = firebaseDB.Node("Produto/" + id);
+            FirebaseDB firebaseDBProd = firebaseDB.Node("Produto/" + id);
             WriteLine("GET Request");
-            FirebaseResponse getResponse = firebaseDBTeams.Get();
+            FirebaseResponse getResponse = firebaseDBProd.Get();
             WriteLine(getResponse.Success);
             if (getResponse.Success)
                 WriteLine(getResponse.JSONContent);
@@ -48,22 +49,41 @@ namespace ClubinhoDoBebe.API.Controllers
 
         // POST api/<ProdutoController>
         [HttpPost]
-        public void Post([FromBody] string value) 
+        public int Post([FromBody] string value) 
         {
-            
+            FirebaseDB firebaseDBProd = firebaseDB.Node("Produto");
+            WriteLine("POST Request");
+            FirebaseResponse postResponse = firebaseDBProd.Post(value);
+            WriteLine(postResponse.Success);
+            if (postResponse.Success) return 200;
 
+            return 400;
         }
 
         // PUT api/<ProdutoController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public int Put(int id, [FromBody] string value)
         {
+            FirebaseDB firebaseDBProd = firebaseDB.Node("Produto");
+            WriteLine("PUT Request");
+            FirebaseResponse putResponse = firebaseDBProd.Put(value);
+            WriteLine(putResponse.Success);
+            if (putResponse.Success) return 200;
+
+            return 400;
         }
 
         // DELETE api/<ProdutoController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public int Delete(string id)
         {
+            FirebaseDB firebaseDBProd = firebaseDB.Node("Produto/" + id);
+            WriteLine("DELETE Request");
+            FirebaseResponse deleteResponse = firebaseDBProd.Delete();
+            WriteLine(deleteResponse.Success);
+            if (deleteResponse.Success) return 200;
+
+            return 400;
         }
     }
 }
