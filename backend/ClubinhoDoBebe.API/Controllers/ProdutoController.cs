@@ -2,7 +2,6 @@
 using ClubinhoDoBebe.Infra;
 using ClubinhoDoBebe.Infra.FirebaseConnection;
 using static System.Console;
-using System;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 

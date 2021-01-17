@@ -1,5 +1,4 @@
 ﻿using ClubinhoDoBebe.Infra.FirebaseConnection;
-using System;
 using System.Net.Http;
 
 namespace ClubinhoDoBebe.Infra
