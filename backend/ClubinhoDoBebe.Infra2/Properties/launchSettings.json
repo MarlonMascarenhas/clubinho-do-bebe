@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "ClubinhoDoBebe.Infra": {
+      "commandName": "Project",
+      "remoteDebugEnabled": false,
+      "sqlDebugging": false,
+      "nativeDebugging": false
+    }
+  }
+}
