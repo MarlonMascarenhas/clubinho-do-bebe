@@ -33,6 +33,7 @@ namespace ClubinhoDoBebe.API.Controllers
         {
             try
             {
+                var produto = _produtoService.ObterListaProdutos();
                 return Ok(new BaseReturn<List<Produto>>()
                 {
                     Sucesso = true,

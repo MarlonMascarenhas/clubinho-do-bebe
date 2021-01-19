@@ -32,12 +32,11 @@ namespace ClubinhoDoBebe.API
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ClubinhoDoBebe.API", Version = "v1" });
             });
 
-            //Add Mapper
-            //services.AddAutoMapper((config) =>
-            //{
-            //    config.AllowNullCollections = true;
-            //    config.AllowNullDestinationValues = true;
-            //});
+            services.AddAutoMapper((config) =>
+            {
+                config.AllowNullCollections = true;
+                config.AllowNullDestinationValues = true;
+            });
 
             services
                 .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
