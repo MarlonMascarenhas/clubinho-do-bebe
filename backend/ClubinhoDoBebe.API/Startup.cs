@@ -39,19 +39,19 @@ namespace ClubinhoDoBebe.API
             });
 
             services
-                .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                .AddJwtBearer(options =>
+            .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            .AddJwtBearer(options =>
+            {
+                options.Authority = "https://securetoken.google.com/clubinhodobebe-cd995";
+                options.TokenValidationParameters = new TokenValidationParameters
                 {
-                    options.Authority = "https://securetoken.google.com/clubinhodobebe-cd995";
-                    options.TokenValidationParameters = new TokenValidationParameters
-                    {
-                        ValidateIssuer = true,
-                        ValidIssuer = "https://securetoken.google.com/clubinhodobebe-cd995",
-                        ValidateAudience = true,
-                        ValidAudience = "clubinhodobebe-cd995",
-                        ValidateLifetime = true
-                    };
-                });
+                    ValidateIssuer = true,
+                    ValidIssuer = "https://securetoken.google.com/clubinhodobebe-cd995",
+                    ValidateAudience = true,
+                    ValidAudience = "clubinhodobebe-cd995",
+                    ValidateLifetime = true
+                };
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

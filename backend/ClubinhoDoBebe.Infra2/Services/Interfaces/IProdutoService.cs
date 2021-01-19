@@ -1,7 +1,7 @@
 ﻿using ClubinhoDoBebe.Domain.Models;
 using System.Collections.Generic;
 
-namespace ClubinhoDoBebe.Infra.Interfaces
+namespace ClubinhoDoBebe.Infra.Services.Interfaces
 {
     public interface IProdutoService
     {

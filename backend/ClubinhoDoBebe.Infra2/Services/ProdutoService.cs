@@ -1,10 +1,10 @@
 ﻿using ClubinhoDoBebe.Domain.Models;
-using ClubinhoDoBebe.Infra.Interfaces;
+using ClubinhoDoBebe.Infra.Services.Interfaces;
 using ClubinhoDoBebe.Infra.Repository.Interfaces;
 using System;
 using System.Collections.Generic;
 
-namespace ClubinhoDoBebe.Infra
+namespace ClubinhoDoBebe.Infra.Services
 {
     public class ProdutoService : IProdutoService
     {

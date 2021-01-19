@@ -3,7 +3,7 @@ using ClubinhoDoBebe.Infra;
 using ClubinhoDoBebe.Infra.FirebaseConnection;
 using static System.Console;
 using System;
-using ClubinhoDoBebe.Infra.Interfaces;
+using ClubinhoDoBebe.Infra.Services.Interfaces;
 using ClubinhoDoBebe.Domain.Models;
 using System.Collections.Generic;
 

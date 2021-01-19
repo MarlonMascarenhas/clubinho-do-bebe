@@ -12,6 +12,10 @@ namespace ClubinhoDoBebe.Infra.Repository
         private readonly IMapper _mapper;
         FirebaseDB firebaseDB = new FirebaseDB(Constantes.UrlFirebase);
 
+        public ProdutoRepository(IMapper mapper)
+        {
+            _mapper = mapper;
+        }
 
         public List<Produto> ObterListaProdutos()
         {
