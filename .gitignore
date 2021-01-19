@@ -37,3 +37,4 @@ msbuild.wrn
 .vs/
 node_modules/
 backend/.vs/
+backend/ClubinhoDoBebe.API/debug.log

@@ -6,7 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ClubinhoDoBebe.Domain.Models\ClubinhoDoBebe.Domain.Models.csproj" />
+    <ProjectReference Include="..\ClubinhoDoBebe.Domain\ClubinhoDoBebe.Domain.csproj" />
   </ItemGroup>
 
 </Project>

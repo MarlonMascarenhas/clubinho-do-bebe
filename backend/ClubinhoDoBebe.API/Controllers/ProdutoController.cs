@@ -3,6 +3,9 @@ using ClubinhoDoBebe.Infra;
 using ClubinhoDoBebe.Infra.FirebaseConnection;
 using static System.Console;
 using System;
+using ClubinhoDoBebe.Infra.Interfaces;
+using ClubinhoDoBebe.Domain.Models;
+using System.Collections.Generic;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -12,21 +15,36 @@ namespace ClubinhoDoBebe.API.Controllers
     [ApiController]
     public class ProdutoController : ControllerBase
     {
+        private readonly IProdutoService _produtoService;
+
         FirebaseDB firebaseDB = new FirebaseDB("https://clubinhodobebe-cd995-default-rtdb.firebaseio.com/");
 
+        public ProdutoController(IProdutoService produtoService)
+        {
+            _produtoService = produtoService;
+        }
         
         //CRUD
         //CREATE, READ, UPDATE, DELETE
         
         // GET: api/<ProdutoController>
         [HttpGet]
-        public string Get()
+        public IActionResult Get()
         {
-            FirebaseDB firebaseDBTeams = firebaseDB.Node("Produto");
-            FirebaseResponse getResponse = firebaseDBTeams.Get();
-            if(getResponse.Success)  
-                return getResponse.JSONContent; 
-            return null;
+            try
+            {
+                return Ok(new BaseReturn<List<Produto>>()
+                {
+                    Sucesso = true,
+                    Mensagem = "Lista de Produtos retornada com sucesso",
+                    Resultado = _produtoService.ObterListaProdutos()
+                }); 
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
         }
 
         // GET api/<ProdutoController>/5
