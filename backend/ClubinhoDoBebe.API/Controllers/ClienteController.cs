@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using ClubinhoDoBebe.Infra;
 using ClubinhoDoBebe.Infra.FirebaseConnection;
 using static System.Console;
+using Microsoft.AspNetCore.Authorization;
 
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -56,9 +57,7 @@ namespace ClubinhoDoBebe.API.Controllers
         public int Put(string id, [FromBody] string value)
         {
             FirebaseDB firebaseDBProd = firebaseDB.Node("Cliente/" + id);
-            WriteLine("PUT Request");
             FirebaseResponse putResponse = firebaseDBProd.Put(value);
-            WriteLine(putResponse.Success);
             if (putResponse.Success) return 200;
 
             return 400;
@@ -69,9 +68,7 @@ namespace ClubinhoDoBebe.API.Controllers
         public int Delete(string id)
         {
             FirebaseDB firebaseDBProd = firebaseDB.Node("Cliente/" + id);
-            WriteLine("DELETE Request");
             FirebaseResponse deleteResponse = firebaseDBProd.Delete();
-            WriteLine(deleteResponse.Success);
             if (deleteResponse.Success) return 200;
 
             return 400;
