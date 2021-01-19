@@ -56,9 +56,7 @@ namespace ClubinhoDoBebe.API.Controllers
         public int Put(string id, [FromBody] string value)
         {
             FirebaseDB firebaseDBProd = firebaseDB.Node("Cliente/" + id);
-            WriteLine("PUT Request");
             FirebaseResponse putResponse = firebaseDBProd.Put(value);
-            WriteLine(putResponse.Success);
             if (putResponse.Success) return 200;
 
             return 400;
@@ -69,9 +67,7 @@ namespace ClubinhoDoBebe.API.Controllers
         public int Delete(string id)
         {
             FirebaseDB firebaseDBProd = firebaseDB.Node("Cliente/" + id);
-            WriteLine("DELETE Request");
             FirebaseResponse deleteResponse = firebaseDBProd.Delete();
-            WriteLine(deleteResponse.Success);
             if (deleteResponse.Success) return 200;
 
             return 400;
