@@ -3,6 +3,7 @@ using ClubinhoDoBebe.Domain;
 using ClubinhoDoBebe.Domain.Models;
 using ClubinhoDoBebe.Infra.FirebaseConnection;
 using ClubinhoDoBebe.Infra.Repository.Interfaces;
+using Newtonsoft.Json;
 using System.Collections.Generic;
 
 namespace ClubinhoDoBebe.Infra.Repository
@@ -21,6 +22,8 @@ namespace ClubinhoDoBebe.Infra.Repository
         {
             FirebaseDB firebaseDBTeams = firebaseDB.Node("Produto");
             FirebaseResponse getResponse = firebaseDBTeams.Get();
+
+            //var result = JsonConvert.DeserializeObject<Produto>(getResponse.JSONContent);
 
             return _mapper.Map<List<Produto>>(getResponse.JSONContent);
         }

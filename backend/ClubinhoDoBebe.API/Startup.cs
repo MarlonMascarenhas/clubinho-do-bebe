@@ -1,15 +1,16 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using AutoMapper;
+using ClubinhoDoBebe.Infra.Services;
+using ClubinhoDoBebe.Infra.Services.Interfaces;
+using ClubinhoDoBebe.Infra.Repository;
+using ClubinhoDoBebe.Infra.Repository.Interfaces;
 
 namespace ClubinhoDoBebe.API
 {
@@ -52,6 +53,10 @@ namespace ClubinhoDoBebe.API
                     ValidateLifetime = true
                 };
             });
+
+            services.AddSingleton<IProdutoRepository, ProdutoRepository>();
+            services.AddTransient<IProdutoService, ProdutoService>();
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
