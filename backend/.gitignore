@@ -36,3 +36,4 @@ msbuild.wrn
 # Visual Studio 2015
 .vs/
 backend/.vs/clubinho-do-bebe/DesignTimeBuild/.dtbcache.v2
+.suo
